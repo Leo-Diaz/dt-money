@@ -27,6 +27,16 @@ export const Container = styled.form`
     & + input {
       margin-top: 1rem;
     }
+
+    & + input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    & + input[type=number] {
+      -moz-appearance: textfield;
+    }
   }
 
   button[type="submit"] {
@@ -49,14 +59,12 @@ export const Container = styled.form`
   }
 `;
 
-
 export const TransactionTypeContainer = styled.div`
   margin: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 `;
-
 interface RadioBoxProps {
   isActive: boolean;
   activeColor: 'green' | 'red';

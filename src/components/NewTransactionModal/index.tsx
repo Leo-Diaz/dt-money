@@ -66,7 +66,6 @@ export function NewTransactionModal({ isOpen, onRequestClose }:NewTransactionMod
         <input
           type="number"
           placeholder="Valor"
-          value={amount}
           onChange={event => setAmount(Number(event.target.value))}
         />
         <TransactionTypeContainer>
